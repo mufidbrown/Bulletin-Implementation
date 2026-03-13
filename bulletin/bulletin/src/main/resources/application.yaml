@@ -1,3 +1,23 @@
+server:
+  port: 8089
+
 spring:
   application:
     name: bulletin-implementation
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/bulletindb
+    username: postgres
+    password: bismillah
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    generate-ddl: true
+
+logging:
+  level:
+    root: INFO
+    id.com.bulletin: DEBUG
