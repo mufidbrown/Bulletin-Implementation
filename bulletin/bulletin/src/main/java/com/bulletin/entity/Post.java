@@ -19,7 +19,7 @@ public class Post {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 10)
     private String authorName;
 
     @Column(nullable = false)

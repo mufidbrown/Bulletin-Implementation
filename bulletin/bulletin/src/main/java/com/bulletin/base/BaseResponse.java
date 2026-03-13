@@ -36,9 +36,7 @@ public class BaseResponse <T>{
         this.data = data;
     }
 
-
     public static <T> BaseResponse<T> success(String message, T data) {
         return new BaseResponse<>(true, message, data);
     }
-
 }
