@@ -31,14 +31,14 @@ public class PostController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<BaseResponse<PostDetailResponse>> createPost(@RequestBody PostCreateRequest postCreateRequest) {
+    public ResponseEntity<BaseResponse<PostDetailResponse>> createPost(@Valid @RequestBody PostCreateRequest postCreateRequest) {
         PostDetailResponse PostDetailResponse = postService.createPost(postCreateRequest);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(BaseResponse.success("게시글 등록 성공", PostDetailResponse));
     }
 
     @PutMapping("/{postId}")
-    public ResponseEntity<BaseResponse<PostDetailResponse>> modifyPost(@PathVariable Integer postId, @RequestBody PostModifyRequest postModifyRequest) {
+    public ResponseEntity<BaseResponse<PostDetailResponse>> modifyPost(@PathVariable Integer postId, @Valid @RequestBody PostModifyRequest postModifyRequest) {
         PostDetailResponse postDetailResponse = postService.modifyPost(postId, postModifyRequest);
         return ResponseEntity.ok(BaseResponse.success("게시글 수정 성공",postDetailResponse));
     }
