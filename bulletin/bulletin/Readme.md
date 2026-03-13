@@ -38,10 +38,28 @@ http://localhost:8089/delete.html
 
 server/postman:
 POST      http://localhost:8089/api/posts/create
+request: {
+  "authorName": "홍길동제목입니다",
+  "password": "test1234",
+  "title": "첫 번째 게시글 제목입니다",
+  "content": "게시글 내용을 여기에 작성합니다."
+}
+
 GET ALL   http://localhost:8089/api/posts/all
 GET BY ID http://localhost:8089/api/posts/13
+
 PUT       http://localhost:8089/api/posts/8
+request: {
+  "authorName": "홍길동",
+  "password": "test1234",
+  "title": "첫 번째 게시글 제목입니다",
+  "content": "게시글 내용을 여기에 작성합니다."
+}
+
 DELETE    http://localhost:8089/api/posts/8
+request: {
+  "password": "test1234"
+}
 ```
 
 Requirements
