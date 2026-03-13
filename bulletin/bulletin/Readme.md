@@ -24,3 +24,5 @@ Requirements
 
 * Maven 3.5.8+
 
+* Database: PostgreSQL
+
